@@ -1,0 +1,9 @@
+databaseChangeLog:
+  - changeSet:
+          id: 2
+          author: Bahruz Tapdigov
+          changes:
+            - createSequence:
+                sequenceName: user_sequence
+                startValue: 1
+                incrementBy: 1

@@ -1,0 +1,30 @@
+spring:
+  application:
+    name: ms-auth-service
+  datasource:
+    url: jdbc:postgresql://localhost:5440/auth_service_db
+    username: auth
+    password: 1234
+
+  jpa:
+    properties:
+      hibernate:
+        format_sql: true
+
+    show-sql: true
+    hibernate:
+
+      ddl-auto: none
+
+  liquibase:
+    enabled: true
+    change-log: classpath:db/change-master.yml
+
+
+server:
+  port: 8081
+
+jwt:
+  secret: YmFocnVaY2hpZWZ0YWxpYnJhbmRzZWN1cmVraXRhYmFjdXJtYW51c2FkZXRmYWxsYWg=
+  expiration: 3600000
+
